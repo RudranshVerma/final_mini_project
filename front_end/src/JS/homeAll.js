@@ -8,7 +8,7 @@ import Layout from "./layout";
 export default function UserList() {
   const [user, setUsers] = useState([]);
   const [att,setAtt]=useState();
-
+ 
   const handleAttendance =  () => {
   user.attendance++
     setAtt(user.attendance)
