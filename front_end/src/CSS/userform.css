@@ -1,0 +1,35 @@
+.userformcard {
+    margin-top: 25px;
+    border: none;
+    width: 900px;
+    padding-top: 40px;
+    /* padding-left: 50px; */
+    align-items: center;
+    position: absolute;
+    text-align: left;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+    background: hsla(205, 46%, 30%, 0);
+    background: linear-gradient(
+      90deg,
+      rgb(196, 180, 135, 0) 0%,
+      rgb(183, 192, 139) 100%
+    );
+    height: 85%;
+  }
+  
+  .userformcard,
+  h1,
+  h6 {
+    color: white;
+  }
+  label {
+    color: #fff;
+  }
+  
+  #emailHelp {
+    color: white;
+  }
+  
