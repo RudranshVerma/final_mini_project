@@ -7,7 +7,6 @@ import "react-toastify/dist/ReactToastify.css";
 import "../CSS/userform.css";
 import UserForm from "./userform";
 import Layout from "./layout";
-
 export default function UserList() {
   const handleDeleteUser = (id) => {
     if (window.confirm("Are you sure you want to delete this data?")) {

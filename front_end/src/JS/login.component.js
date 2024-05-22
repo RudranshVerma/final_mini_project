@@ -2,8 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../CSS/login.component.css";
-import { ToastContainer} from "react-toastify";
-
+import { ToastContainer, toast} from "react-toastify";
 export default function Login() {
   const navigate = useNavigate();
   const [loginRequest, setLoginRequest] = useState({
@@ -25,6 +24,7 @@ export default function Login() {
         if (res.data.message === "Email not exits") {
           alert("Email not exits");
         } else if (res.data.message === "Login Success") {
+          toast.success("Login Successful")
           localStorage.setItem("role",res.data.role)
           localStorage.setItem("id",res.data.id)
           navigate("/home")
@@ -39,6 +39,7 @@ export default function Login() {
   };
   return (
     <div>
+      {/* Login form  */}
       <div className="logincontainer">
         <div className="row">
           <div className="col-md-6">
@@ -63,7 +64,7 @@ export default function Login() {
                     onChange={(e) => {
                       handleChange(e, "email");
                     }}
-                  />
+                  />a
                   <div id="emailHelp" className="form-text">
                     We'll never share your email with anyone else.
                   </div>

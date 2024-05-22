@@ -4,7 +4,6 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "../CSS/userform.css";
 import Layout from "./layout";
-
 export default function UserList() {
   const [user, setUsers] = useState([]);
   const [att,setAtt]=useState();

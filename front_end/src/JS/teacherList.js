@@ -1,17 +1,13 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "../CSS/userform.css";
-import UserForm from "./userform";
 import Layout from "./layout";
 
 export default function UserList() {
   const [users, setUsers] = useState([]);
-  const navigate = useNavigate();
-
 
   const handleDeleteUser = (id) => {
     if (window.confirm("Are you sure you want to delete this data?")) {
@@ -24,7 +20,6 @@ export default function UserList() {
         .catch((error) => console.log(error));
     }
   };
-
   const rows = users.map((user) => {
     if(String(user.role)==="Teacher"){
     return (
@@ -52,10 +47,8 @@ export default function UserList() {
       </tr>
     );
   }
-  });
-
+});
   useEffect(() => {
-    
     axios
       .get("http://localhost:8080/getAllUsers")
       .then((response) => {
@@ -65,12 +58,9 @@ export default function UserList() {
       })
       .catch((error) => console.log(error));
   }, [users]);
-
   return (
     <Layout>
-
     <div>
-      
       <div class="container" style={{ alignContent: "center" }}>
         <div class="row">
           <div class="col-md-6">
@@ -93,27 +83,6 @@ export default function UserList() {
                   </thead>
                   <tbody>{rows}</tbody>
                 </table>
-              </div>
-              <div className="btn-group gap-4" role="group">
-                <Button
-                  className="btn btn-primary"
-                  onClick={() => {
-                    navigate("/userForm");
-                    <UserForm></UserForm>;
-                  }}
-                >
-                  Add New Student
-                </Button>
-                <button
-                  type="button"
-                  className="btn btn-primary"
-                  style={{ borderRadius: "4px" }}
-                  onClick={() => {
-                    navigate("/userupdate")
-                  }}
-                >
-                  Edit
-                </button>
               </div>
             </div>
           </div>

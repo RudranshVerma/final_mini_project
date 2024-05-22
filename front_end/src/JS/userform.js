@@ -23,13 +23,13 @@ const UserForm = ({ onClose }) => {
       })
       .then((res) => {console.log(res.data);
         toast.success("user created succesfully")
-      navigate("/myprofile")});
+      navigate("/home")});
     // console.log(username);
     // console.log(useremail);
     // console.log(password);
   };
   const handlecancel=()=>{
-    navigate("/myprofile")
+    navigate("/home")
   }
 
   return (

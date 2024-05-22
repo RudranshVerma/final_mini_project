@@ -21,6 +21,9 @@ function AdminNavBar() {
             </LinkContainer>
           </Nav>
           <Nav >
+          <LinkContainer to="/userform">
+              <Nav.Link>Add New User</Nav.Link>
+            </LinkContainer>
             <LinkContainer to="/">
               <Nav.Link>LogOut</Nav.Link>
             </LinkContainer>
