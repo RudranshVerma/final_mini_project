@@ -1,0 +1,206 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif; /* Use a font similar to the one in the image */
+  background-color: #19221D; /* Dark green background color */
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+.landing-page {
+  text-align: center;
+  position: relative;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center; /* Center the entire navbar content */
+  align-items: center;
+  padding: 20px 50px;
+  position: relative; /* Relative positioning for the logo and menu icon */
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  position: absolute; /* Position the logo absolutely */
+  left: 50px; /* Adjust as needed */
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-item {
+  margin: 0 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  position: relative;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.nav-item.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #f0c14b; /* Highlight color for active link */
+}
+
+.menu-icon {
+  display: none; /* Hide by default */
+  font-size: 30px;
+  cursor: pointer;
+  color: #ffffff;
+  position: absolute; /* Position the menu icon absolutely */
+  right: 50px; /* Adjust as needed */
+}
+
+.hero-section {
+  padding: 100px 0;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-text {
+  font-size: 2rem;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 3px;
+}
+
+.hero-subtext {
+  font-size: 5rem;
+  font-weight: 700;
+  margin: 20px 0;
+  text-transform: uppercase;
+}
+
+.hero-buttons {
+  margin-top: 40px;
+}
+
+.btn {
+  padding: 15px 30px;
+  border: none;
+  cursor: pointer;
+  margin: 0 15px;
+  border-radius: 25px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.book-btn {
+  background-color: #f0c14b;
+  color: #111;
+}
+
+.explore-btn {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.explore-btn:hover {
+  background-color: #ffffff;
+  color: #111;
+}
+
+.main-image {
+  max-width: 700px; /* Set a specific maximum width */
+  width: 100%;
+  margin: 50px auto; /* Center the image with margin */
+  border-radius: 15px;
+  display: block; /* Ensures the image is centered as a block element */
+}
+
+.slider-navigation {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.slider-dot {
+  height: 10px;
+  width: 10px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.slider-dot.active {
+  opacity: 1;
+}
+
+.social-media {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 20px; /* Add padding to position icons */
+}
+
+.social-media::before {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 150px; /* Adjust height as needed */
+  background-color: #ffffff;
+  margin-bottom: 20px; /* Space between line and first icon */
+}
+
+.social-icon {
+  font-size: 20px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  color: #ffffff;
+  opacity: 0.7;
+}
+
+.social-icon:hover {
+  opacity: 1;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .nav-links {
+    display: none; /* Hide navigation links on mobile */
+  }
+
+  .menu-icon {
+    display: block; /* Show menu icon on mobile */
+  }
+
+  .hero-text {
+    font-size: 1.5rem;
+  }
+
+  .hero-subtext {
+    font-size: 3rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
+  }
+
+  .social-media {
+    left: 10px;
+  }
+}
+ 
